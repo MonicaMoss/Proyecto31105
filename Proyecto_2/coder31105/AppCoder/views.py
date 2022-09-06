@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Curso
+from .models import Curso, Estudiante
 from django.http import HttpResponse
 
 
@@ -29,6 +29,12 @@ def profesores(request):
 
 def entregables(request):
     return render (request, "AppCoder/entregables.html")
+
+def prueba(request):
+    estudiante1=Estudiante(nombre="Aureliano", apellido="Buendia", email="aureb@ug.com")
+    estudiante1.nombre="Cristina"
+    estudiante1.save()
+
 
 
 
